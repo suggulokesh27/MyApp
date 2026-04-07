@@ -6,7 +6,7 @@ const SplashScreen = ({ navigation }: any) => {
       
       <View style={styles.centerContent}>
         <Image
-          source={require('../../publish/images/Central Logo Grouping.png')}
+          source={require('../../publish/images/logo.png')}
           style={styles.logo}
         />
       </View>

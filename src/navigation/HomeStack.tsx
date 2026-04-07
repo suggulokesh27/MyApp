@@ -1,11 +1,13 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../screens/home/HomeScreen';
-import ProductScreen from '../screens/home/ProductScreen';
 import AppHeader from '../components/comman/AppHeader';
 import DetailsScreen from '../screens/home/DetailsScreen';
-import Rechedule from '../screens/home/Reschedule';
+import Reschedule from '../screens/home/Reschedule';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import CancalScreenSummary from '../screens/home/CancalSummayScreen';
+import CancelRequestScreen from '../screens/home/CancelRequestScreen';
+import PaymentSummarScreen from '../screens/home/PaymentSummaryScreen';
 
 const Stack = createStackNavigator();
 
@@ -29,9 +31,31 @@ export default function HomeStack() {
 
       <Stack.Screen
         name="Reschedule"
-        component={Rechedule}
+        component={Reschedule}
         options={{
           header: () => <AppHeader title="Rechedule" />, 
+        }}
+      />
+
+       <Stack.Screen
+        name="Cancel"
+        component={CancalScreenSummary}
+        options={{
+          header: () => <AppHeader title="Cancel The Booking" />, 
+        }}
+      />
+       <Stack.Screen
+        name="CancelBooking"
+        component={CancelRequestScreen}
+        options={{
+          header: () => <AppHeader title="Kitchen Appliances" isHelpVisible ={false} subTitle='Today 7AM' />, 
+        }}
+      />
+        <Stack.Screen
+        name="PaymentSummary"
+        component={PaymentSummarScreen}
+        options={{
+          header: () => <AppHeader title="Payment Summary" isHelpVisible={false} />, 
         }}
       />
     </Stack.Navigator>

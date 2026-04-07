@@ -32,7 +32,7 @@ const LogInScreen = ({ navigation }: { navigation: any }) => {
       
       <View style={styles.logoContainer}>
         <Image
-          source={require('../../publish/images/Central Logo Grouping.png')}
+          source={require('../../publish/images/logo.png')}
           style={styles.logo}
         />
       </View>

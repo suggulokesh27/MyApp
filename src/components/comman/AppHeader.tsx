@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import Icon from "react-native-vector-icons/Ionicons";
 import { useNavigation } from "@react-navigation/native";
+import BackIcon from "../../../publish/icons/Vector.svg";
 
 type Props = {
   title: string;
@@ -24,7 +24,7 @@ const AppHeader = ({ title, subTitle, isHelpVisible = false }: Props) => {
     <View style={styles.container}>
       
       <TouchableOpacity style={styles.iconBtn} onPress={handleBack}>
-        <Icon name="arrow-back" size={22} color="#222" />
+        <BackIcon width={16} height={16} />
       </TouchableOpacity>
 
       <View style={styles.center}>

@@ -5,10 +5,11 @@ const SubmitButton = ({
   title,
   bgColor = '#CE8C3E',
   textColor = '#fff',
+  style,
 }: any) => {
   return (
     <TouchableOpacity
-      style={[styles.submitButton, { backgroundColor: bgColor }]}
+      style={[styles.submitButton, { backgroundColor: bgColor },style]}
       onPress={handleLogin}
     >
       <Text style={[styles.submitText, { color: textColor }]}>
